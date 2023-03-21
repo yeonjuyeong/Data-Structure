@@ -20,3 +20,26 @@ linked list는 한 건물 내에서 한 회사가 임대한 사무실이 서로 
 
 #### 희소행렬 
 희소 행렬은 요소 중 많은 항들이 0(영)으로 되어 있는 형태로 기억 장소를 절약하기 위해 링크드 리스트를 이용하여 저장한다.<br>
+
+#### 스택
+![image](https://user-images.githubusercontent.com/123055714/226507266-5c0de864-f8e0-4140-a7a2-76e9e83c8900.png)<br>
+스택의배열,크기,포인터 생성<br>
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/123055714/226522009-345fbd55-4853-480e-a18e-0ca615666117.png)<br>
+스택이 가득차거나 스택이 하나도 없을때의 경우를 만든다<br>
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/123055714/226522794-99a1b425-bb88-4b93-8866-e37e261e7ce5.png)<br>
+스택 생성
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/123055714/226522826-02f58695-7725-4f94-8b6e-042f6d50d9c4.png)<br>
+스택에 x 값을 넣음
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/123055714/226522911-88482fb3-131a-4c8b-ad11-42ac8f01e668.png)<br>
+스택에 있는 값을 0까지 꺼냄
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/123055714/226523041-d0addeeb-6a8b-4bc4-98e3-c9aff2663377.png)
