@@ -22,7 +22,12 @@ linked list는 한 건물 내에서 한 회사가 임대한 사무실이 서로 
 희소 행렬은 요소 중 많은 항들이 0(영)으로 되어 있는 형태로 기억 장소를 절약하기 위해 링크드 리스트를 이용하여 저장한다.<br>
 
 #### ▶스택
-FILO<br>
+스택은 리스트의 한쪽 끝으로만 자료의 삽입 및 삭제가 이루어지는 구조로 먼저 삽입된 자료가 맨 나중에 삭제가 되는 후입선출(LIFO)방식이다.
+###### 삽입
+![image](https://user-images.githubusercontent.com/123055714/226809476-62237adf-0075-4b32-b176-4dff70eef938.png)
+###### 삭제
+![image](https://user-images.githubusercontent.com/123055714/226809731-8f4242ed-ad39-4352-9c06-2a28eb1a70e5.png)
+#### java로 구현
 ```java
 public class IntStack {
 	private int[] stk;	//스택용 배열
@@ -84,7 +89,10 @@ public class IntStack {
 <br>
 ![image](https://user-images.githubusercontent.com/123055714/226808772-74dfacac-df3c-494f-a395-dc111478ecee.png)
 #### ▶큐
-FIFO<br>
+큐는 한쪽 방향으로 데이터가 삽입되고 반대 방향으로 데이터가 삭제되는 구조로 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO)방식이다.
+###### 삽입,
+![image](https://user-images.githubusercontent.com/123055714/226809976-18c436d7-019b-48a9-97c6-a2f87a44442b.png)
+#### java로 구현
 ```java
 public class IntQueue {                  
 	private int[] que;		//큐용 배열      
