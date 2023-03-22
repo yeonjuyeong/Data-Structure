@@ -23,47 +23,134 @@ linked list는 한 건물 내에서 한 회사가 임대한 사무실이 서로 
 
 #### ▶스택
 FILO<br>
-![image](https://user-images.githubusercontent.com/123055714/226507266-5c0de864-f8e0-4140-a7a2-76e9e83c8900.png)<br>
+```java
+public class IntStack {
+	private int[] stk;	//스택용 배열
+	private int capacity;	//스택의 크기
+	private int ptr;	//스택용 포인터
+```
 스택의배열,크기,포인터 생성<br>
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/123055714/226522009-345fbd55-4853-480e-a18e-0ca615666117.png)<br>
+```java
+	//--- 실행시 예외: 스택이 비어있음 ---//
+	public class EmptyIntStackException extends RuntimeException{
+		public EmptyIntStackException() { }
+	}
+	//--- 실행시 예외: 스택이 가득 참 ---//
+		public class OverflowIntStackException extends RuntimeException{
+			public OverflowIntStackException() { }
+	}
+```
 스택이 가득차거나 스택이 하나도 없을때의 경우를 만든다<br>
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/123055714/226522794-99a1b425-bb88-4b93-8866-e37e261e7ce5.png)<br>
+```java
+		//--- 생성자(constructor) ---//
+		public IntStack(int maxlen) {
+			ptr = 0;
+			capacity = maxlen;
+			try {
+				stk = new int[capacity];	//스택 본체용 배열을 생성
+			}catch(OutOfMemoryError e) {	//생성할 수 없음
+				capacity = 0;
+			}
+		}
+ ```
 스택 생성
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/123055714/226522826-02f58695-7725-4f94-8b6e-042f6d50d9c4.png)<br>
+```java
+		//--- 스택에 x를 푸시 ---//
+		public int push(int x)throws OverflowIntStackException{
+			if(ptr>= capacity)		//스택이 가득 참
+				throw new OverflowIntStackException();
+			return stk[ptr++] = x;
+		}
+  ```
 스택에 x 값을 넣음
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/123055714/226522911-88482fb3-131a-4c8b-ad11-42ac8f01e668.png)<br>
+```java
+		//--- 스택에서 데이터를 팝(정상에 있는 데이터를 꺼냄) ---//
+		public int pop() throws EmptyIntStackException{
+			if(ptr == 0)			//스택이 빔
+				throw new EmptyIntStackException();
+			return stk[--ptr];
+		}
+  ```
 스택에 있는 값을 0까지 꺼냄
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/123055714/226523041-d0addeeb-6a8b-4bc4-98e3-c9aff2663377.png)
-
+![image](https://user-images.githubusercontent.com/123055714/226808772-74dfacac-df3c-494f-a395-dc111478ecee.png)
 #### ▶큐
 FIFO<br>
-![image](https://user-images.githubusercontent.com/123055714/226807135-60d3f7e4-12ac-4ed9-9ffb-e93b80dd7693.png)<br>
+```java
+public class IntQueue {                  
+	private int[] que;		//큐용 배열      
+	private int capacity;		//큐의 크기  
+	private int front;		//맨 처음 요소 커서 
+	private int rear;		//맨 끝 요소 커서  
+	private int num;		//현재 데이터 개수  
+```
 큐의 배열,크기,처음 요소 커서,맨 끝 요소 커서, 현재 데이터의 갯수를 생성<br>
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/123055714/226807353-481b2d53-7d77-4c12-8d62-a2ca006dda01.png)<br>
+```java
+//--- 실행시 예외: 큐가 비어있음 ---//                                       
+public class EmptyIntQueueException extends RuntimeException{     
+	public EmptyIntQueueException() { }                           
+}                                                                 
+//--- 실행시 예외: 큐가 가득 찼음 ---//                                      
+public class OverflowIntQueueException extends RuntimeException{  
+	public OverflowIntQueueException() { }                        
+ }
+```
 큐가 가득차거나 큐가 하나도 없을때의 경우를 만든다<br>
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/123055714/226807431-1f29e89e-fe9d-4953-ba03-20d8f039c9ba.png)<br>
+```java
+//--- 생성자(constructor) ---//                         
+public IntQueue(int maxlen) {                        
+	num = front = rear = 0;                          
+	capacity = maxlen;                               
+	try {                                            
+		que = new int[capacity];	//큐 본체용 배열 생성    
+	}catch (OutOfMemoryError e) {	//생성할 수 없음       
+		capacity = 0;                                
+	}                                                
+}
+```
 큐를 생성<br>
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/123055714/226807576-9a391916-f6e6-4c1a-859f-8db40c7d1ed9.png)<br>
+```java
+//--- 큐에 데이터를 인큐 ---//                                   
+public int enque(int x) throws OverflowIntQueueException{
+	if(num >= capacity)                                  
+		throw new OverflowIntQueueException();           
+	que[rear++]	 = x;                                    
+	num++;                                               
+	if(rear == capacity)                                 
+	rear = 0;                                            
+	return x;                                            
+}                     
+```
 큐에 데이터를 넣음(인큐)<br>
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/123055714/226807620-5e8ac144-b5b3-46ad-afcc-3273319f0cf7.png)<br>
+```java
+//--- 큐에 데이터를 디큐 ---//                            
+public int deque() throws EmptyIntQueueException{ 
+	if(num >= 0)                                  
+		throw new EmptyIntQueueException();       
+	int x = que[front++];                         
+	num--;                                        
+	if(front == capacity)                         
+	front = 0;                                    
+	return x;                                     
+}                                                 
+```
 큐에 데이터를 뺀다(디큐)<br>
 <br>
 <br>
