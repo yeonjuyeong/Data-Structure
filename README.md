@@ -22,7 +22,7 @@ linked list는 한 건물 내에서 한 회사가 임대한 사무실이 서로 
 희소 행렬은 요소 중 많은 항들이 0(영)으로 되어 있는 형태로 기억 장소를 절약하기 위해 링크드 리스트를 이용하여 저장한다.<br>
 
 #### ▶스택
-FILO 
+FILO<br>
 ![image](https://user-images.githubusercontent.com/123055714/226507266-5c0de864-f8e0-4140-a7a2-76e9e83c8900.png)<br>
 스택의배열,크기,포인터 생성<br>
 <br>
@@ -46,7 +46,7 @@ FILO
 ![image](https://user-images.githubusercontent.com/123055714/226523041-d0addeeb-6a8b-4bc4-98e3-c9aff2663377.png)
 
 #### ▶큐
-FIFO
+FIFO<br>
 ![image](https://user-images.githubusercontent.com/123055714/226807135-60d3f7e4-12ac-4ed9-9ffb-e93b80dd7693.png)<br>
 큐의 배열,크기,처음 요소 커서,맨 끝 요소 커서, 현재 데이터의 갯수를 생성<br>
 <br>
@@ -64,4 +64,7 @@ FIFO
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/123055714/226807620-5e8ac144-b5b3-46ad-afcc-3273319f0cf7.png)<br>
-큐에 데이터를 뺀다(디큐)
+큐에 데이터를 뺀다(디큐)<br>
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/123055714/226808191-3944d5c0-3570-4e1a-914b-c6c375e4c89d.png)
