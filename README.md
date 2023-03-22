@@ -44,3 +44,16 @@ FILO
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/123055714/226523041-d0addeeb-6a8b-4bc4-98e3-c9aff2663377.png)
+
+#### ▶큐
+FIFO
+![image](https://user-images.githubusercontent.com/123055714/226807135-60d3f7e4-12ac-4ed9-9ffb-e93b80dd7693.png)<br>
+큐의 배열,크기,처음 요소 커서,맨 끝 요소 커서, 현재 데이터의 갯수를 생성<br>
+![image](https://user-images.githubusercontent.com/123055714/226807353-481b2d53-7d77-4c12-8d62-a2ca006dda01.png)<br>
+큐가 가득차거나 큐가 하나도 없을때의 경우를 만든다<br>
+![image](https://user-images.githubusercontent.com/123055714/226807431-1f29e89e-fe9d-4953-ba03-20d8f039c9ba.png)<br>
+큐를 생성
+![image](https://user-images.githubusercontent.com/123055714/226807576-9a391916-f6e6-4c1a-859f-8db40c7d1ed9.png)<br>
+큐에 데이터를 넣음(인큐)
+![image](https://user-images.githubusercontent.com/123055714/226807620-5e8ac144-b5b3-46ad-afcc-3273319f0cf7.png)<br>
+큐에 데이터를 뺀다(디큐)
