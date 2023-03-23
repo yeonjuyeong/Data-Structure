@@ -177,6 +177,7 @@ public int deque() throws EmptyIntQueueException{
 이진트리(Binary Tree)는 각 노드가 최대 두 개의 자식 노드를 가지는 트리 자료구조입니다.<br>
 이진트리는 루트(root) 노드를 중심으로 두 개의 서브트리로 나뉘며, 각 서브트리도 다시 이진트리의 형태를 가지고 있습니다.<br>
 이진 트리는 많은 종류와 순회 방법을 가지고 있습니다.
+자식 노드에서 부모 쪽으로 계속해서 타고 올라가다 보면 결국 부모가 없는 하나의 노드로 이어지게 되는데, 이 노드를 루트 노드(root node)
 ![image](https://user-images.githubusercontent.com/123055714/227127605-aadeb095-3d7a-4db2-9d9c-025bb7bc32a3.png)
 ##### 순회
 중위 순회(in-order traversal): 왼쪽 자손, 자신, 오른쪽 자손 순서로 방문하는 순회 방법. 이진 탐색 트리를 중위 순회하면 정렬된 결과를 얻을 수 있다.<br>
