@@ -88,6 +88,11 @@ public class IntStack {
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/123055714/226808772-74dfacac-df3c-494f-a395-dc111478ecee.png)
+
+
+
+
+
 #### ▶큐
 큐는 한쪽 방향으로 데이터가 삽입되고 반대 방향으로 데이터가 삭제되는 구조로 먼저 들어온 데이터가 먼저 나가는 선입선출(FIFO)방식이다.
 ###### 삽입,
@@ -163,3 +168,29 @@ public int deque() throws EmptyIntQueueException{
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/123055714/226808191-3944d5c0-3570-4e1a-914b-c6c375e4c89d.png)
+
+
+
+
+
+#### ▶이진 트리
+이진트리(Binary Tree)는 각 노드가 최대 두 개의 자식 노드를 가지는 트리 자료구조입니다.<br>
+이진트리는 루트(root) 노드를 중심으로 두 개의 서브트리로 나뉘며, 각 서브트리도 다시 이진트리의 형태를 가지고 있습니다.<br>
+이진 트리는 많은 종류와 순회 방법을 가지고 있습니다.
+##### 순회
+중위 순회(in-order traversal): 왼쪽 자손, 자신, 오른쪽 자손 순서로 방문하는 순회 방법. 이진 탐색 트리를 중위 순회하면 정렬된 결과를 얻을 수 있다.<br>
+전위 순회(pre-order traversal): 자신, 왼쪽 자손, 오른쪽 자손 순서로 방문하는 순회 방법.<br>
+후위 순회(post-order traversal): 왼쪽 자손, 오른쪽 자손, 자신 순서로 방문하는 순회 방법.<br>
+레벨 순서 순회(level-order traversal): 너비 우선 순회(Breadth-First traversal)라고도 한다
+노드를 레벨 순서로 방문하는 순회 방법. 
+위의 세 가지 방법은 스택을 활용하여 구현할 수 있는 반면 레벨 순서 순회는 큐를 활용해 구현할 수 있다.<br>
+##### 종류
+완전 이진트리(Complete Binary Tree)<br>
+포화 이진트리(Full Binary Tree)<br>
+균형 이진트리(Balanced Binary Tree)<br>
+등 다양한 종류의 이진트리가 있으며, 각각의 종류마다 자신만의 특징과 활용 방법이 있습니다.<br>
+##### 특징
+루트 노드에서 어떤 노드에 접근하기 위해서는 항상 유일한 경로가 존재합니다.<br>
+왼쪽 서브트리에는 부모 노드보다 작은 값의 노드가, 오른쪽 서브트리에는 부모 노드보다 큰 값의 노드가 저장됩니다.<br>
+모든 노드의 서브트리도 이진트리입니다.<br>
+![image](https://user-images.githubusercontent.com/123055714/227127605-aadeb095-3d7a-4db2-9d9c-025bb7bc32a3.png)
