@@ -173,6 +173,16 @@ public int deque() throws EmptyIntQueueException{
 
 
 
+###  2.비선형구조
+#### ▶트리
+트리는 정점(Node)과 선분(branch)를 이용하여 사이클을 이루지 않도록 구성한 그래프(Graph)의 특수한 형태이다.<br>
+- 가족이 계보(족보), 연산 수식, 회사 조직 구성도, 히프(Heep) 등을 표현하기에 적합하다.<br>
+![image](https://user-images.githubusercontent.com/123055714/227391391-0e8aca5a-b179-423b-a20b-535149621072.png)
+![image](https://user-images.githubusercontent.com/123055714/227391806-bb9ac2b4-14bd-4a31-ba49-d368f537a53c.png)
+
+#### ▶완전 트리
+단말 노드를 제외한 나머지 노드가 두 개의 자식 노드를 가지고 있는 트리.<br>
+->A, B, C, D 노드는 모두 두 개의 자식 노드를 가지고 있다
 #### ▶이진 트리
 이진트리(Binary Tree)는 각 노드가 최대 두 개의 자식 노드를 가지는 트리 자료구조입니다.<br>
 이진트리는 루트(root) 노드를 중심으로 두 개의 서브트리로 나뉘며, 각 서브트리도 다시 이진트리의 형태를 가지고 있습니다.<br>
